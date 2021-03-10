@@ -1,0 +1,23 @@
+include head.pug
+
+<body  onload="load_survey_save_offline();">
+<header>
+	<h1>Ankieta odżywiania</h1>
+	<h1> TI Projekt nr.2 </h1>
+	<br><br/>
+</header>
+<div class="vertical-menu">
+	<a href="./">Wypełnij ankiete</a>
+	<a  href="./analytics">Wykresy</a>
+	<a  href="./survey_results">Wyniki</a>
+	<a  href="./survey_save_offline">Zapis offline</a>
+	<a  href="./login" id="login">Zaloguj się</a>
+	<a  href="./logout" id="logout">Wyloguj się</a>
+</div>
+<div id="content">
+	<h2>Zapis ankiet offline</h2>
+	<button type="button" id="get_save_offline">Wczytaj zapis</button>
+	<div id="offline_results"></div>
+</div>
+
+include footer.pug

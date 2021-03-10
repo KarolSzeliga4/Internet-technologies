@@ -1,0 +1,50 @@
+include head.pug
+
+<body  onload="load_survey();">
+<header>
+	<h1>Ankieta odżywiania</h1>
+	<h1> TI Projekt nr.2 </h1>
+	<br><br/>
+</header>
+<div class="vertical-menu">
+	<a href="./">Wypełnij ankiete</a>
+	<a  href="./analytics">Wykresy</a>
+	<a  href="./survey_results">Wyniki</a>
+	<a  href="./survey_save_offline">Zapis offline</a>
+	<a  href="./login" id="login">Zaloguj się</a>
+	<a  href="./logout" id="logout">Wyloguj się</a>
+</div>
+<div id="content">
+	<h2>Ankieta</h2>
+	<form action="#" id="survey_form">
+		<label for="firstName">Imię</label>
+		<input type="text" name="firstName" id="firstName" value="Adam" required><br><br>
+
+		<label for="lastName">Nazwisko</label>
+		<input type="text" name="lastName" id="lastName" value="Nowak" required><br><br>
+
+		<p>1. Ile posiłków dziennie zjadasz?</p>
+		<input type="radio" name="mealsNum" value="1-2" checked required>1-2<br>
+		<input type="radio" name="mealsNum" value="3-4" >3-4<br>
+		<input type="radio" name="mealsNum" value="5" >5<br>
+		<input type="radio" name="mealsNum" value="moreTh5" >więcej niż 5<br>
+
+		<p>2. Czy jesz coś pomiędzy głównymi posiłkami?</p>
+		<input type="radio" name="betweenMeals" value="yes" checked required>tak<br>
+		<input type="radio" name="betweenMeals" value="somet" >czasami<br>
+		<input type="radio" name="betweenMeals" value="no" >nie<br>
+
+		<p>3. Ile czasu po przebudzeniu zjadasz swój pierwszy posiłek?</p>
+		<input type="radio" name="hoursAftSleep" value="atOnce" checked required>od razu<br>
+		<input type="radio" name="hoursAftSleep" value="in1h" >w ciągu godziny<br>
+		<input type="radio" name="hoursAftSleep" value="max3h" >do trzech godzin<br>
+		<input type="radio" name="hoursAftSleep" value="noteat" >nie jem śniadań<br>
+
+		<p>4. Ile godzin przed snem zjadasz swój ostatni posiłek?</p>
+		<input type="number" name="hoursBefSleep" id="hoursBefSleep" min="0" max="8" value="5" required><br><br>
+		<input type="submit" value="Wyślij">
+		<input type="button" value="Zapisz lokalnie" id="save_locally">
+	</form>
+</div>
+
+include footer.pug

@@ -1,0 +1,32 @@
+include head.pug
+
+<body onload="load_analytics();">
+<header>
+	<h1>Ankieta odżywiania</h1>
+	<h1> TI Projekt nr.2 </h1>
+	<br><br/>
+</header>
+<div class="vertical-menu">
+	<a href="./">Wypełnij ankiete</a>
+	<a  href="./analytics">Wykresy</a>
+	<a  href="./survey_results">Wyniki</a>
+	<a  href="./survey_save_offline">Zapis offline</a>
+	<a  href="./login" id="login">Zaloguj się</a>
+	<a  href="./logout" id="logout">Wyloguj się</a>
+</div>
+<div id="content">
+	<h2>Histogram</h2>
+	<button type="button" id="draw_chart">Rysuj</button>
+	<div class="wrapper">
+		<p>1. Ile posiłków dziennie zjadasz?</p>
+		<canvas id="chart01" width="800" height="400"></canvas>
+
+		<p>3. Ile czasu po przebudzeniu zjadasz swój pierwszy posiłek?</p>
+		<canvas id="chart03" width="800" height="400"></canvas>
+
+		<p>4. Ile godzin przed snem zjadasz swój ostatni posiłek?</p>
+		<canvas id="chart04" width="800" height="400"></canvas>
+	</div>
+</div>
+
+include footer.pug

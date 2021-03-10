@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="UTF-8">
+        <title> Krzywa Beziera</title>
+        <link rel="StyleSheet" href="styles.css" type="text/css">
+        <script src="skrypt.js" type="text/javascript"></script>
+        </head>
+
+        <body>
+        <div id = "header">
+        </br>
+        <h1>Krzywa Beziera</h1>
+        </div>
+        <div id = "page">
+        <article>
+        </br>
+        <h2>Cel strony</h2>
+        <p>Strona ma na celu przybliżyć sposób tworzenia krzywej Beziera z pomocą interaktywnej animacji stworzonej specjalnie na te potrzeby.
+        </p>
+	</br>
+        <h2>Trochę historii</h2>
+        <p>Pierwszy raz ten sposób opisu linii został zastosowany przez inżyniera firmy Renaut Pierre’a Béziera około 1962 roku i to na jego cześć do dziś się ją tak nazywa. Niezależnie stworzył ją również Paul de Casteljau z konkurencyjnej firmy Citroën. Duży udział w rozpowszechniemiu się krzywej Beziera miał A.R. Forrest, który wydał artykuł "Interactive interpolation and approximation by Bezier polynomials" w 1972 roku. Dziś krzywą Beziera powszechnie stosuje się w programach do projektowania inżynierskiego, tworzenia grafiki wektorowej (np. SVG) i systemach przetwarzania grafiki. 
+        </p>
+	</br>
+        <h2>Zasada powstawania krzywej Beziera</h2>
+        <p>Jest to linia powstała przy pomocy grupy punktów rozmieszczonych na płaszczyźnie lub w przestrzeni. Pierwszy i ostatni punkt oznaczają końce krzywej, a przy pomocy reszty modyfikujemy jej krzywiznę. Aby intuicyjnie przybliżyć jej powstawanie posłużymy się przykładem składającym się z 4 punktów. Dwa punkty końcowe i dwa na modyfikację krzywizny. W tym przydaku zaczniemy od znalezienia środkowego punktu krzywej. Najpierw połączymy prostymi kolejne punkty. Następnie wybierzemy środki powstałych odcinków (zielone punkty na rys.1). Potem połączymy kolejne środki liniami prostymi (zielone linie). Na koniec wybierzemy środki zielonych odcinków i po złączeniu powstanie nam niebieska linia. Jej środek to szukany środkowy punkt krzywej (czarny).
+        </p>
+        </br>
+        <img src="srodek.jpg" alt="obraz krzywej Beziera">
+	<p>Rys.1</p></br>
+        <p>Jak widać punkt powstał przez dzielenie odcinków na pół, aż dojdziemy do pojedynczego punktu. Warto nadmienić, że nie jest to dokładnie punkt w połowie długości krzywej, ale powstał on na w skutek łączenia środków odcinków. W podobny sposób powstają inne punkty krzywej. Na przykład punkt w 3/10. Tylko tym razem nie dzielimy odcinków na pół, tylko w 3/10 ich długości. 
+        </p>
+        <img src="trzy.jpg" alt="obraz krzywej Beziera 2">
+        <p>Rys.2</p></br>
+	<p>W ten sposób powstaje nam cała krzywa. Tak samo jej początek i koniec, tylko dzielimy odcinek w stosunku 0/10, co oznacza, że wybieramy początek odcinka, czyli pierwszy punkt. Zmieniająca się zmienna t oznacza kolejne części setne powstającej krzywej.
+        </p>
+        <img src="bezier_show.gif" alt="Bezier 4 points">
+	<p>Anim.1</p></br>
+        <h2>Rysowanie w praktyce</h2>
+        <p>Znamy już zasadę powstawania krzywych, ale dla zrozumienia jak położenie punktów zmienia położenie prostej przyda się prosta praktyka. Stwórz własną krzywą Beziera i poddaj ją animacji, aby zobaczyć dokładnie jak powstaje:
+        </p>
+        <p id="cords"></p>
+
+        <button id="openButton" type="button" onClick="openBlock()">Otwórz blok do rysowania</button>
+	</br>
+        <canvas id="drawblock" onClick="addpoint(event)" width="1" height="1" style="background-color:white;">
+        brak wsparcia canvas :(
+        </canvas>
+	</br>
+        <button id="animButton" type="button" onClick="animateBezier()">Start Animacja</button>
+        <button id="offButton" type="button" onClick="stopAnimate()">Wyłącz animacje</button>
+        <button id="deletePointsButton" type="button" onClick="deletePoints()">Resetuj pole</button>
+	</br>
+        </article>
+        </div>
+        <footer></br>Autor:</br><span>Karol Szeliga</span></br><span>Projekt nr.1 Techniki Internetowe</span>
+	</br><span>Strona działa na Mozilli i Chrome</span>
+	</br><a href="doc.pdf">Użyte technologie</a></footer>
+        </body>
+</html>

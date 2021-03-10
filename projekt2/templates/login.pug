@@ -1,0 +1,35 @@
+include head.pug
+
+<body onload="load_login();">
+<header>
+	<h1>Ankieta odżywiania</h1>
+	<h1> TI Projekt nr.2 </h1>
+	<br><br/>
+</header>
+<div class="vertical-menu">
+	<a href="./">Wypełnij ankiete</a>
+	<a  href="./analytics">Wykresy</a>
+	<a  href="./survey_results">Wyniki</a>
+	<a  href="./survey_save_offline">Zapis offline</a>
+	<a  href="./login" id="login">Zaloguj się</a>
+	<a  href="./logout" id="logout">Wyloguj się</a>
+</div>
+<div id="content">
+	<h2>Zaloguj się</h2>
+	<form action="" id="login_form" method="POST">
+		<div class="row">
+			<label for="userName">Login:‏‏‎</label>
+			<input type="text" id="username" name="username" placeholder="admin" value="admin" required>
+		</div>
+
+		<div class="row">
+			<label for="pass">Hasło:</label>
+			<input type="password" id="pass" name="pass" value="1111" placeholder="1111" required>
+		</div>
+		<div class="row">
+			<input type="submit" value="Zaloguj">
+		</div>
+	</form>
+</div>
+
+include footer.pug

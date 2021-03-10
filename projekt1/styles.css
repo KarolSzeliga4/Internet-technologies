@@ -1,0 +1,33 @@
+body {
+	font-family: Comic Sans MS, Comic Sans, cursive;
+	color: #00008B;
+	background-color: #B3FFFF;
+}
+
+#header{
+	text-align: center;
+	margin:0 auto;
+        background-color:#ffcccc;
+        min-height:150px;
+        width:80%;
+      }
+
+#page {
+        margin:0 auto;
+        background-color:#DDD;
+        min-height:150px;
+        width:80%;
+      }
+
+footer {
+        margin:0 auto;
+        border-radius: 20px;
+        text-align:center;
+        background-color:#ffcccc;
+        min-height:100px;
+        width:60%;
+      }
+
+article {
+        margin: 0px 15% 0px 15%;
+      }

@@ -1,0 +1,36 @@
+include head.pug
+
+<body>
+<header>
+	<h1>Ankieta odżywiania</h1>
+	<h1> TI Projekt nr.2 </h1>
+	<br><br/>
+</header>
+<div class="vertical-menu">
+	<a href="./">Wypełnij ankiete</a>
+	<a  href="./analytics">Wykresy</a>
+	<a  href="./survey_results">Wyniki</a>
+	<a  href="./survey_save_offline">Zapis offline</a>
+	<a  href="./login" id="login">Zaloguj się</a>
+	<a  href="./logout" id="logout">Wyloguj się</a>
+</div>
+<div id="content">
+	<h2>Dokumentacja</h2>
+	<p>
+		|Projekt realizuje prostą ankietę. Niezalogowany użytkownik wypełnia ankiety i zapisuje je w lokalnej bazie danych.<br>
+		|Po zalogowaniu ankiety z lokalnej bazy są wysyłane do bazy danych na serwerze (automatycznie). Zalogowany użytkownik może <br>
+		|wysyłać ankiety bezpośrednio do bazy danych na serwerze (może też zapisć lokalnie, wtedy musi się wylogować i zalogować <br>
+		|jeszcze raz, aby wysłać te dane, tutaj niedopracowane). Po zalogowaniu może też przeglądać wykresy i wyniki ankiet. <br><br>
+		|Użyte technologie: <br><br>
+		|po stronie klienta: <br>
+		| - HMTL5 <br>
+		| - CSS <br>
+		| - JavaScript + AJAX + IndexedDB + Chart.js <br><br>
+		|po stronie serwera: <br>
+		| - Baza danych: MongoDB <br>
+		| - Node.js <br>
+		| - moduły: body-parser, express, express-session, mongodb, pug <br>
+	</p>
+</div>
+
+include footer.pug
