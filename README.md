@@ -1,3 +1,3 @@
 # Techniki-internetowe
 
-Projekty wykonane na przedmiocie TI na serwerze uczelni.
+Projects for 'Internet technologies' course (AGH WFiIS 2021)
